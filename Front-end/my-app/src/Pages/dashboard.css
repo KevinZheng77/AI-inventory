@@ -1,0 +1,65 @@
+.inventory {
+    display: grid;
+    gap: 1rem; /* Space between cards */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid of cards */
+    margin: 1rem;
+}
+
+.inventoryItem {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.inventoryItem h3 {
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.userText {
+    margin-top: 2rem;
+}
+
+.userText label {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.2rem;
+}
+
+.userText input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: darkcyan;
+    color: white;
+    cursor: pointer;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+.inventoryTitle {
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.5rem;
+    color: darkcyan;
+    margin-top: 2rem;
+}
+

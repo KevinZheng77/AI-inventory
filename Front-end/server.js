@@ -6,6 +6,8 @@ const cookieParser = require('cookie-parser');
 //importing routes
 const authRoute = require("./routes/auth");
 const InventoryRoute = require("./routes/Inventory");
+const GoogleRoute = require("./routes/Google");
+const { GoogleApis } = require('googleapis');
 const app = express();
 
 app.use(express.json());
@@ -27,6 +29,7 @@ app.post('/name', (req, res) => {
 
 app.use("/api/auth", authRoute);
 app.use("/api/Inventory", InventoryRoute);
+app.use("/api/google", GoogleRoute);
 
 mongoose.connect(process.env.MONGO_URI).then(()=>{
     console.log(' You just connected to the database');

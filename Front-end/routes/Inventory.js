@@ -24,7 +24,10 @@ router.post("/new", requireAuth, async (req,res) =>{
         }
         const entry = new InventoryModel({
             user: req.user._id,
-            content: req.body.content,
+            ProductName: req.body.ProductName,
+            Selling: req.body.Selling,
+            Cost: req.body.Cost,
+            Size: req.body.Size,
         });
 
         await entry.save();
@@ -35,7 +38,7 @@ router.post("/new", requireAuth, async (req,res) =>{
     }
 })
 
-// @route POST /api/Inventory/new
+// @route POST /api/Inventory/current
 // @desc  Current user inventory
 // @access Private
 router.get('/current', requireAuth, async (req, res) =>{

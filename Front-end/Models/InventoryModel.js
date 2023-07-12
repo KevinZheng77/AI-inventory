@@ -6,10 +6,22 @@ const InventoryModelSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: "User"
         },
-        content: {
+        ProductName: {
             type: String,
-            require: true,
+            required: true,
         },
+        Size: {
+            type: Number,
+            required: true,
+        },
+        Cost: {
+            type: Number,
+            required: true,
+        },
+        Selling: {
+            type: Number,
+            required: true,
+        }
     }
 )
 

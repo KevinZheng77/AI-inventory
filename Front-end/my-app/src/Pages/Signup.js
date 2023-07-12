@@ -1,9 +1,14 @@
 import React from "react";
-
-export default function Signup(){
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./Header";
+import '../main.scss';
+import SignupForm from "./SignupForm";
+const Signup = () => {
     return(
         <div>
-            Signup
+            <SignupForm/>
         </div>
     )
 }
+
+export default Signup;

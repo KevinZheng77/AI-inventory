@@ -5,7 +5,9 @@ const bcrypt = require('bcryptjs');
 const validateRegisterInput = require("./Validation/Validate");
 const jsonwebtoken = require('jsonwebtoken');
 const requireAuth = require('../middleware/permission');
-
+const cors = require("cors");
+const app = express();
+app.use(cors());
 // @route GET  /api/auth/test
 // @desc  Test the auth route
 // @access Public
@@ -103,6 +105,20 @@ router.post("/login", async(req, res) =>{
     }
 })
 
+// @route   PUT /api/auth/logout
+// @desc    Logout user a clear the cookie
+// @access  Private
+router.put("/logout", requireAuth, async (req, res) => {
+    try {
+      res.clearCookie("access-token");
+      return res.json({ success: true });
+    } catch (err) {
+      console.log(err);
+      return res.status(500).send(err.message);
+    }
+  });
+
+  
 // @route POST  /api/auth/current
 // @desc  Return the currently authenticated user
 // @access Private

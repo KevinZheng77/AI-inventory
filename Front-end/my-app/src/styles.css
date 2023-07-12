@@ -1,33 +1,43 @@
 .LandingPageNavBar {
-    background-color: black;
+    background-color: #1a1a1a; /* Darker color for better contrast */
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     gap: 2rem;
-    padding: 0 1rem;
-
+    padding: 1rem 2rem; /* Increased padding for better look */
+    font-family: 'Luckiest Guy'; 
 }
-.LandingPageNavBar ul{
+
+.LandingPageNavBar ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem; /* Increased gap for better look */
+    list-style-type: none; /* Remove bullet points */
 }
+
 .LandingPageNavBar a {
     color: inherit;
     text-decoration: none;
     height: 100%;
     display: flex;
     align-items: center;
-    padding: .25rem;
+    padding: .5rem; /* Increased padding for better look */
+    transition: color 0.3s ease; /* Transition for smoother color change */
 }
 
-.LandingPageNavBar li.active{
-    background-color: black;
+.LandingPageNavBar li {
+    transition: background-color 0.3s ease; /* Transition for smoother color change */
 }
 
-.LandingPageNavBar li:hover{
-    background-color: white;
+.LandingPageNavBar li.active {
+    background-color: #333; /* Different color to distinguish active link */
+    color: #fff;
+}
+
+.LandingPageNavBar li:hover {
+    background-color: #444; /* Dark gray color on hover */
+    color: #f0f0f0; /* Slightly off-white color for text on hover */
 }
 

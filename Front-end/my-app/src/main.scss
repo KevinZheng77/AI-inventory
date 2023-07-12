@@ -1,0 +1,103 @@
+.main-header{
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+
+    &_inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: 'Luckiest Guy', cursive;
+    }
+    &_left{
+        a{
+            color: white;
+            font-weight: 700;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: all .3s ease;
+            font-family: 'Luckiest Guy', cursive;
+
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+}
+
+.btn{
+    display: inline-block;
+    background-color: darkcyan;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 1 rem;
+    transition: all .2 ease;
+    justify-content: center;
+    font-family: 'Luckiest Guy', cursive; 
+    &:hover{
+        background-color: aqua;
+        cursor: pointer;
+    }
+}
+
+.auth{
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+
+    &_box{
+        max-width: 500px;
+        width: 100%;
+        padding: 50px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+    }
+
+    &_header{
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: 'Luckiest Guy', cursive;
+    }
+    &_field{
+        margin-bottom: 30px;
+        label{
+            display: block;
+            margin-bottom: 10px;
+            font-family: 'Luckiest Guy', cursive; 
+        }
+        input{
+            background-color: darkgrey;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-family: 'Luckiest Guy', cursive;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+        &_footer{
+            .btn{
+                width: 100%;
+            }
+            .auth_error{
+                margin-bottom: 1rem;
+                text-align: center;
+                font-size: 1.25rem;
+            }
+        }
+        &_error{
+            font-size: 1rem;
+            margin-top: 10px;
+            color: red;
+            font-family: 'Luckiest Guy', cursive;
+        }
+}

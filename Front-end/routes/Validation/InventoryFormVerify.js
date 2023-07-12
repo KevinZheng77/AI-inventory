@@ -4,12 +4,26 @@ const isEmpty = require('./Emptyemail');
 const validateInventoryInput = data =>{
     let errors={};
 
-    //check if the content is empty
-    if(isEmpty(data.content)){
-        errors.content = "Content field can not be empty"
+    //check if the Name is empty
+    if(isEmpty(data.ProductName)){
+        errors.ProductName = "Name Can't be empty"
     }
-    else if(!Validator.isLength(data.content)){
-        errors.content = "Content field must be between 1 and 300 characters";
+
+    //check if the Selling is empty
+    if(isEmpty(data.Selling)){
+        errors.Selling = "Selling Price can not be empty"
+    }
+
+
+    //check if the Cost is empty
+    if(isEmpty(data.Cost)){
+        errors.Cost = "Cost of Product can not be empty"
+    }
+
+
+    //check if the Size is empty
+    if(isEmpty(data.Size)){
+        errors.Cost = "Size can not be empty"
     }
 
     return{
